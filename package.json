@@ -1,0 +1,33 @@
+{
+  "name": "js-ways",
+  "version": "1.0.6",
+  "description": "A js method library.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babyAnnie/js-ways.git"
+  },
+  "keywords": [
+    "js",
+    "es6",
+    "es7",
+    "es8",
+    "es9",
+    "es10",
+    "es11",
+    "es12",
+    "function",
+    "work",
+    "front-end"
+  ],
+  "author": "DDY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/babyAnnie/js-ways/issues"
+  },
+  "homepage": "https://github.com/babyAnnie/js-ways#readme",
+  "type": "module"
+}
