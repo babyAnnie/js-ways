@@ -1,6 +1,7 @@
+/* eslint-disable */
 // @ts-nocheck
 
-// 全屏函数：输入：元素id。无返回。
+// 使元素全屏。 无返回。
 export const fullscreen = (id) => {
   const elem = document.getElementById(id)
   if (!elem) return
@@ -15,7 +16,7 @@ export const fullscreen = (id) => {
   }
 }
 
-// 退出全屏函数：无输入，无返回。
+// 使元素退出全屏函。 无返回。
 export const exitFullscreen = () => {
   if (document.exitFullScreen) {
     document.exitFullScreen();
@@ -28,7 +29,7 @@ export const exitFullscreen = () => {
   }
 }
 
-// 监听全屏状态下的F11键盘事件：输入监听时要运行函数，返回一个退出监听函数。
+// 监听全屏事件。返回一个退出监听函数。
 export const monitorFullscreen = (fn = () => { }) => {
   if (document.addEventListener) {
     document.addEventListener('webkitfullscreenchange', fn, false);
@@ -46,7 +47,8 @@ export const monitorFullscreen = (fn = () => { }) => {
   }
 }
 
-// 统一存储数据到浏览器。要求存储的数据为json格式。输入：存储的键值。返回存储对象。
+// 统一存储数据到浏览器。要求存储的数据为json格式。
+// 输入：存储的键值。返回存储对象。
 export const unifiedStorage = (name) => {
   return {
     get(key = '') {
@@ -77,7 +79,8 @@ export const unifiedStorage = (name) => {
   };
 }
 
-// 时间个位数变两位数。输入1-2位数，输出2位数的字符串
+// 时间个位数变两位数。
+// 输入1-2位数，输出2位数的字符串。
 export const oneBecomesTwo = (num) => {
   if (!num) return ''
   if (typeof num === 'number') {
@@ -91,7 +94,7 @@ export const oneBecomesTwo = (num) => {
   }
 }
 
-// 处理日期格式函数。0：处理年月日，1：处理时分秒。
+// 处理日期格式函数。type： 0处理年月日，1处理时分秒。
 export const formatDate = (obj = {}) => {
   if (typeof obj !== 'object') return '';
   const { date = new Date(), joiner = '/', type = 0 } = obj;
@@ -111,7 +114,7 @@ export const formatDate = (obj = {}) => {
   }
 };
 
-// 生成随机唯一id。输入布尔值，返回字符串ID
+// 生成随机唯一id。输入布尔值，返回字符串ID。
 export const generateID = (random = false) => {
   if (random) {
     return Math.random().toString(36).slice(2);
@@ -139,7 +142,6 @@ export const downloadData = (obj = {}) => {
   document.body.removeChild(link);
 }
 
-
 // 防抖函数
 /**  应用场景:
 (1) 用户在输入框中连续输入一串字符后，只会在输入完后去执行最后一次的查询ajax请求，这样可以有效减少请求次数，节约请求资源；
@@ -162,7 +164,6 @@ export const debounce = (obj = {}) => {
     }, delay)
   }
 }
-
 
 //节流函数
 /**
@@ -195,7 +196,6 @@ export const throttle = (obj = {}) => {
   }
 }
 
-
 // 判断数据类型
 export const getValueType = (v) => {
   return Object.prototype.toString.call(v).slice(8, -1)
@@ -210,7 +210,7 @@ export const stopBubble = (e) => {
   }
 }
 
-// 获取url上的参数
+// 获取URL上的参数。返回对象或者值。
 export const getUrlParam = (obj = {}) => {
   if (!obj) return ''
   const { url = '', key = '', getObj = false } = obj;
@@ -231,8 +231,7 @@ export const getUrlParam = (obj = {}) => {
   return searchParams.get(key) ?? ''
 }
 
-
-// 验证邮箱的正则表达式
+// 验证邮箱的正则表达式。返回布尔值。
 export const isAvailableEmail = (email = '') => {
   const reg = /^([\w+\.])+@\w+([.]\w+)+$/;
   return reg.test(email)
@@ -254,25 +253,15 @@ export const curryIt = (obj = {}) => {
       : curryIt(currying.apply(this, [fn].concat(rest)), length - rest.length)        // 在通用currying函数基础上
   }
 }
-// 测试函数柯里化
-// function sayHello(name, age, fruit) {
-//   console.log(`我叫 ${name},我 ${age} 岁了, 我喜欢吃 ${fruit}`)
-// }
-// const betterShowMsg = curryIt(sayHello)
-// betterShowMsg('小衰', 20, '西瓜')      // 我叫 小衰,我 20 岁了, 我喜欢吃 西瓜
-// betterShowMsg('小猪')(25, '南瓜')      // 我叫 小猪,我 25 岁了, 我喜欢吃 南瓜
-// betterShowMsg('小明', 22)('倭瓜')      // 我叫 小明,我 22 岁了, 我喜欢吃 倭瓜
-// betterShowMsg('小拽')(28)('冬瓜')      // 我叫 小拽,我 28 岁了, 我喜欢吃 冬瓜
 
-
-// 判断china身份证城市
+// 判断china身份证城市。返回字符串。
 export const getIDCity = (judgeID = '') => {
   if (!judgeID || judgeID?.toString()?.length < 2) return '';
   const aCity = { 11: "北京", 12: "天津", 13: "河北", 14: "山西", 15: "内蒙古", 21: "辽宁", 22: "吉林", 23: "黑龙江", 31: "上海", 32: "江苏", 33: "浙江", 34: "安徽", 35: "福建", 36: "江西", 37: "山东", 41: "河南", 42: "湖北", 43: "湖南", 44: "广东", 45: "广西", 46: "海南", 50: "重庆", 51: "四川", 52: "贵州", 53: "云南", 54: "西藏", 61: "陕西", 62: "甘肃", 63: "青海", 64: "宁夏", 65: "新疆", 71: "台湾", 81: "香港", 82: "澳门", 91: "国外" };
   return aCity?.[parseInt(judgeID.slice(0, 2))] ?? ''
 }
 
-// 劫持粘贴板
+// 劫持粘贴板。无返回。
 // Document.execCommand()是操作剪贴板的传统方法，各种浏览器都支持。不推荐，已过时。支持复制、剪切和粘贴这三个操作。'copy'：复制，'cut'：剪切，'paste'：粘贴，
 // Clipboard 对象提供了四个方法，用来读写剪贴板。它们都是异步方法，返回 Promise 对象。
 export const copyToClipboard = (obj = {}) => {
@@ -306,8 +295,7 @@ export const copyToClipboard = (obj = {}) => {
   }
 }
 
-
-// 判断元素是否在视野范围内
+// 判断元素是否在视野范围内。返回布尔值。
 export const isInViewport = (id) => {
   const el = document.getElementById(id);
   if (!el) return false;
@@ -316,7 +304,7 @@ export const isInViewport = (id) => {
   return (top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth) ?? false;
 }
 
-// 获取滚动元素的滚动坐标
+// 获取滚动元素的滚动坐标。返回对象。
 export const getScrollCoordinates = (id) => {
   const el = document.getElementById(id) ?? window;
   return {
@@ -325,14 +313,12 @@ export const getScrollCoordinates = (id) => {
   }
 };
 
-
-// 判断是否是地址
+// 判断是否是地址。返回布尔值。
 export const isURL = (url) => {
   return /^http[s]?:\/\/.*/.test(url)
 }
 
-
-// 多维数组扁平化
+// 多维数组扁平化。返回数组。
 export const flattenArray = (arr = []) => {
   if (!Array.isArray(arr)) return []
   return arr.reduce(
@@ -341,8 +327,7 @@ export const flattenArray = (arr = []) => {
   )
 };
 
-
-// 数组分块
+// 数组分块。返回数组。
 export const chunkArray = (arr = [], size = 1) => {
   if (!Array.isArray(arr)) return [[]]
   return arr.reduce(
@@ -356,7 +341,7 @@ export const chunkArray = (arr = [], size = 1) => {
   );
 };
 
-// 字符统计
+// 字符统计。返回对象。
 export const countChar = (str = '') => {
   if (typeof str !== 'string') return {}
   str = str.split("");
@@ -366,6 +351,5 @@ export const countChar = (str = '') => {
   }, {});
 };
 
-
-// 成随机的十六进制颜色
+// 成随机的十六进制颜色。返回字符串。
 export const generateHexColor = () => `#${Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, '0')}`;
