@@ -1,4 +1,4 @@
-# :desktop_computer: Working method library
+# :desktop_computer: Working method library <span id="top"></span>
 
 [中文](https://github.com/babyAnnie/js-ways/blob/master/README.md) | [English](https://github.com/babyAnnie/js-ways/blob/master/README.en.md)
 
@@ -36,13 +36,13 @@
 <br/>
 
 
-**chunkArray(arr, size)** <span id="chunkArray"></span> [top](#desktopcomputer-working-method-library)
+## **chunkArray(arr, size)** <span id="chunkArray"></span>
  - arr: array
  - size: number
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { arrayChunk } from 'js-ways';
 
 const arr = [1, 2, 3, 4, 5, 6, 7];
@@ -50,16 +50,17 @@ const size = 5;
 const v = arrayChunk(arr, size);
 console.log('v', v);
 // Output: [[1, 2, 3, 4, 5], [6, 7]]
-```
+````
+[:top:top](#top)
 
 
-**copyToClipboard({ value, callback})** <span id="copyToClipboard"></span> [top](#desktopcomputer-working-method-library)
+## **copyToClipboard({ value, callback})** <span id="copyToClipboard"></span>
  - value: string
  - callback: function
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { copyTextToClipboard } from 'js-ways';
 
 copyTextToClipboard({
@@ -70,29 +71,31 @@ copyTextToClipboard({
 })
 // Output: Copy end.
 // Others: the content has been set to the pasteboard
-```
+````
+[:top:top](#top)
 
 
-**countChar(str)** <span id="countChar"></span> [top](#desktopcomputer-working-method-library)
+## **countChar(str)** <span id="countChar"></span>
  - str: string
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { countChar } from 'js-ways';
 
-const c = countChar('你好 我是燕燕')
+const c = countChar('Hello, I'm Yanyan')
 console.log('c', c)
-// Output: { "你": 1, "好": 1, " ": 1, "我": 1, "是": 1, "燕": 2 }
-```
+// Output: { "you": 1, "good": 1, " ": 1, "me": 1, "yes": 1, "yan": 2 }
+````
+[:top:top](#top)
 
 
-**curryIt(fn)** <span id="curryIt"></span> [top](#desktopcomputer-working-method-library)
+## **curryIt(fn)** <span id="curryIt"></span>
  - fn: function
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { curryIt } from 'js-ways';
 
 function sayHello(name, age, fruit) {
@@ -110,16 +113,17 @@ My name is Aleng, I am 25 years old, I like to eat grapes
 My name is Mingming, I am 22 years old, I like to eat apples
 My name is Xiaohong, I am 28 years old, I like to eat avocado
 */
-```
+````
+[:top:top](#top)
 
 
-**debounce({fn, delay})** <span id="debounce"></span> [top](#desktopcomputer-working-method-library)
+## **debounce({fn, delay})** <span id="debounce"></span>
  - fn: function
  - delay: number
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { debounce } from 'js-ways';
 
 const fn = () => console.log(`❤❤❤❤❤❤❤❤❤❤❤❤${new Date()}❤❤❤❤❤❤❤❤❤❤❤`);
@@ -128,11 +132,12 @@ debounce({
   fn,
   delay: 3000
 })()
-// Output: ❤❤❤❤❤❤❤❤❤❤❤❤Tue Jun 21 2022 10:43:34 GMT+0800 (中国标准时间)❤❤❤❤❤❤❤❤❤❤❤❤
-```
+// Output: ❤❤❤❤❤❤❤❤❤❤❤Tue Jun 21 2022 10:43:34 GMT+0800 (China Standard Time)❤❤❤❤❤❤❤❤❤❤❤
+````
+[:top:top](#top)
 
 
-**downloadData({jsonArr, fileName, columnHeader, suffix})** <span id="downloadData"></span> [top](#desktopcomputer-working-method-library)
+## **downloadData({jsonArr, fileName, columnHeader, suffix})** <span id="downloadData"></span>
  - jsonArr: array
  - fileName: string
  -columnHeader: string
@@ -140,7 +145,7 @@ debounce({
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { downloadData } from 'js-ways';
 
 downloadDataToLocal({
@@ -165,130 +170,139 @@ downloadDataToLocal({
 // Output: none
 // Others: The file has been downloaded locally
 // Notice: Note that columnHeader should be used, (English comma)!
-```
+````
+[:top:top](#top)
 
 
-**exitFullscreen()**<span id="exitFullscreen"></span> [top](#desktopcomputer-work method library)
+## **exitFullscreen()**<span id="exitFullscreen"></span>
  - nothing
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { exitFullscreen } from 'js-ways';
 
 exitFullscreen()
 // Output: none
 // Others: element exits fullscreen
-```
+````
+[:top:top](#top)
 
 
-**flattenArray(arr)** <span id="flattenArray"></span> [top](#desktopcomputer-working-method-library)
+## **flattenArray(arr)** <span id="flattenArray"></span>
  - arr: array
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { flattenArray } from 'js-ways';
 
 const a = arrayFlatten([1, 2, 3, [4, [5, [6], 7]]])
 console.log('a', a)
 // Output: [ 1, 2, 3, 4, 5, 6, 7 ]
-```
+````
+[:top:top](#top)
 
 
-**formatDate(date,joiner)** <span id="formatDate"></span> [top](#desktopcomputer-working-method-library)
+## **formatDate(date,joiner)** <span id="formatDate"></span>
  - date: Date
  - joiner: string
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { formatDate } from 'js-ways';
 
 const c = formatDate()
 console.log('c', c);
 // Output: 2022/06/21
-```
+````
+[:top:top](#top)
 
 
-**fullscreen(id)** <span id="fullscreen"></span> [top](#desktopcomputer-working-method-library)
+## **fullscreen(id)** <span id="fullscreen"></span>
  - id: string
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { fullscreen } from 'js-ways';
 
 becomeFullscreen("elem-id")
 // Output: none
 // Others: element becomes full screen
-```
+````
+[:top:top](#top)
 
 
-**generateHexColor()** <span id="generateHexColor"></span> [top](#desktopcomputer-working-method-library)
+## **generateHexColor()** <span id="generateHexColor"></span>
  - nothing
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { generateHexColor } from 'js-ways';
 
 const r = randomHexColor();
 console.log('r', r);
 // Output: #d36df4
-```
+````
+[:top:top](#top)
 
 
-**generateID(random)** <span id="generateID"></span> [top](#desktopcomputer-working-method-library)
+## **generateID(random)** <span id="generateID"></span>
  - random: boolean
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { generateID } from 'js-ways';
 
 const g = generateUniqueID()
 console.log('g', g);
 // Output: l4nl3sx0
-```
+````
+[:top:top](#top)
 
 
-**getIDCity(judgeID)** <span id="getIDCity"></span> [top](#desktopcomputer-work method library)
+## **getIDCity(judgeID)** <span id="getIDCity"></span>
  - judgeID: string/number
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { getIDCity } from 'js-ways';
 
 const g4 = getIDCity('440802200005223520')
 console.log('g4', g4);
 // Output: Guangdong
-```
+````
+[:top:top](#top)
 
 
-**getScrollCoordinates(el)** <span id="getScrollCoordinates"></span> [top](#desktopcomputer-working-method-library)
+## **getScrollCoordinates(el)** <span id="getScrollCoordinates"></span>
  - el: element
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { getScrollCoordinates } from 'js-ways';
 
 const g = getScrollPosition('scroll-elem-id');
 console.log('g', g);
 // Output: { x: 0, y: 0 }
-```
+````
+[:top:top](#top)
 
 
-**getUrlParam({url, key})** <span id="getUrlParam"></span> [top](#desktopcomputer-working-method-library)
+## **getUrlParam({url, key})** <span id="getUrlParam"></span>
  - url: string
  - key: string
  - getObj: boolean
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { getUrlParam } from 'js-ways';
 
 const g = getUrlParam(
@@ -298,114 +312,122 @@ const g = getUrlParam(
   }
 )
 console.log('g,', g);
-// Output: { sl: "zh-CN", tl: "en", text: "年月日\n时分秒", op: "translate" }
-```
+// Output: { sl: "zh-CN", tl: "en", text: "year month day\nhour minute second", op: "translate" }
+````
+[:top:top](#top)
 
 
-**getValueType(v)** <span id="getValueType"></span> [top](#desktopcomputer-working-method-library)
+##**getValueType(v)** <span id="getValueType"></span>
  - v: any type
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { getValueType } from 'js-ways';
 
 const g = getDataType([]);
 console.log('g', g);
 // Output: Array
-```
+````
+[:top:top](#top)
 
 
-**isAvailableEmail(email)** <span id="isAvailableEmail"></span> [top](#desktopcomputer-work method library)
+## **isAvailableEmail(email)** <span id="isAvailableEmail"></span>
  - email: string
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { isAvailableEmail } from 'js-ways';
 
 const b = isAvailableEmail('2829139244@qq.com')
 console.log('b', b);
 // Output: true
-```
+````
+[:top:top](#top)
 
 
-**isInViewport(id)** <span id="isInViewport"></span> [top](#desktopcomputer-working-method-library)
+## **isInViewport(id)** <span id="isInViewport"></span>
  - id: string (element id)
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { isInViewport } from 'js-ways';
 
 const b = isInViewport('elem-id');
 console.log('b', b);
 // Output: false
-```
+````
+[:top:top](#top)
 
 
-**isURL(url)** <span id="isURL"></span> [top](#desktopcomputer-working-method-library)
+## **isURL(url)** <span id="isURL"></span>
  - url: string
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { isURL } from 'js-ways';
 
 const b = isURL('https://baidu.com.cn')
 console.log('b', b);
 // Output: true
-```
+````
+[:top:top](#top)
 
 
-**monitorFullscreen(fn)** <span id="monitorFullscreen"></span> [top](#desktopcomputer-working-method-library)
+## **monitorFullscreen(fn)** <span id="monitorFullscreen"></span>
  - fn: function
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { monitorFullscreen } from 'js-ways';
 
 monitorFullscreen(() => console.log('Events executed when the fullscreen state changes...'))
 // Output: Event executed when the fullscreen state changes...
-```
+````
+[:top:top](#top)
 
 
-**oneBecomesTwo(num)** <span id="oneBecomesTwo"></span> [top](#desktopcomputer-working-method-library)
+## **oneBecomesTwo(num)** <span id="oneBecomesTwo"></span>
  - num: number | string(number)
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { oneBecomesTwo } from 'js-ways';
 
 const o = oneBecomesTwo(1);
 console.log('o', o);
 // Output: 01
-```
+````
+[:top:top](#top)
 
 
-**stopBubble(e)** <span id="stopBubble"></span> [top](#desktopcomputer-working-method-library)
+## **stopBubble(e)** <span id="stopBubble"></span>
  - e: event
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { stopBubble } from 'js-ways';
 
 stopBubble(event);
 // Output: none
 // Others: Prevent child element's events from bubbling to parent element
-```
+````
+[:top:top](#top)
 
 
-**throttle({fn, delay})** <span id="throttle"></span> [top](#desktopcomputer-working-method-library)
+## **throttle({fn, delay})** <span id="throttle"></span>
  - fn: function
  - delay: number (ms, milliseconds)
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { throttle } from 'js-ways';
 
 const fn = () => console.log(`❤❤❤❤❤❤❤❤❤❤❤❤${new Date()}❤❤❤❤❤❤❤❤❤❤❤`);
@@ -413,16 +435,17 @@ throttle({
   fn,
   delay: 3000
 })()
-// Output: ❤❤❤❤❤❤❤❤❤❤❤❤Tue Jun 21 2022 11:24:59 GMT+0800 (中国标准时间)❤❤❤❤❤❤❤❤❤❤❤❤
-```
+// Output: ❤❤❤❤❤❤❤❤❤❤❤Tue Jun 21 2022 11:24:59 GMT+0800 (China Standard Time)❤❤❤❤❤❤❤❤❤❤❤
+````
+[:top:top](#top)
 
 
-**unifiedStorage(name)** <span id="unifiedStorage"></span> [top](#desktopcomputer-working-method-library)
+## **unifiedStorage(name)** <span id="unifiedStorage"></span>
  - name: string
 <br/>
 
 :hibiscus: Example:
-```js
+````js
 import { unifiedStorage } from 'js-ways';
 
 const store = unifiedStorage('school');
@@ -437,4 +460,5 @@ console.log('s', s)
 store.clear('someone');
 // Output: Aleng
 // Others: {teacher: "Aleng", student: "Mingming"} is stored in localStorage
-```
+````
+[:top:top](#top)
