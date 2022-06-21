@@ -5,7 +5,6 @@
 [![Version](https://runkit.io/bokub/npm-version/branches/master/js-ways?style=flat)](https://www.npmjs.com/package/js-ways)
 [![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/babyAnnie/js-ways/blob/master/LICENSE)
 ![](https://visitor-badge.glitch.me/badge?page_id=babyAnnie.js-ways)
-[![facebaook](https://img.shields.io/badge/-facebaook-1ca0f1)](https://www.facebook.com/profile.php?id=100080899597653)
 
 | Method name                                  | Describe |
 | :------------------------------------------: | --------------------- |
