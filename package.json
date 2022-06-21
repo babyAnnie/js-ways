@@ -1,6 +1,6 @@
 {
   "name": "js-ways",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A js method library.",
   "main": "index.js",
   "scripts": {
