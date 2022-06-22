@@ -43,11 +43,11 @@
 
 :hibiscus: Example:
 ````js
-import { arrayChunk } from 'js-ways';
+import { chunkArray } from 'js-ways';
 
 const arr = [1, 2, 3, 4, 5, 6, 7];
 const size = 5;
-const v = arrayChunk(arr, size);
+const v = chunkArray(arr, size);
 console.log('v', v);
 // Output: [[1, 2, 3, 4, 5], [6, 7]]
 ````
@@ -61,9 +61,9 @@ console.log('v', v);
 
 :hibiscus: Example:
 ````js
-import { copyTextToClipboard } from 'js-ways';
+import { copyToClipboard } from 'js-ways';
 
-copyTextToClipboard({
+copyToClipboard({
   value: 'test copyToClipboard...',
   callback: () => {
     console.log('Copy end.');
@@ -197,7 +197,7 @@ exitFullscreen()
 ````js
 import { flattenArray } from 'js-ways';
 
-const a = arrayFlatten([1, 2, 3, [4, [5, [6], 7]]])
+const a = flattenArray([1, 2, 3, [4, [5, [6], 7]]])
 console.log('a', a)
 // Output: [ 1, 2, 3, 4, 5, 6, 7 ]
 ````
@@ -228,7 +228,7 @@ console.log('c', c);
 ````js
 import { fullscreen } from 'js-ways';
 
-becomeFullscreen("elem-id")
+fullscreen("elem-id")
 // Output: none
 // Others: element becomes full screen
 ````
@@ -243,7 +243,7 @@ becomeFullscreen("elem-id")
 ````js
 import { generateHexColor } from 'js-ways';
 
-const r = randomHexColor();
+const r = generateHexColor();
 console.log('r', r);
 // Output: #d36df4
 ````
@@ -258,7 +258,7 @@ console.log('r', r);
 ````js
 import { generateID } from 'js-ways';
 
-const g = generateUniqueID()
+const g = generateID()
 console.log('g', g);
 // Output: l4nl3sx0
 ````
@@ -288,7 +288,7 @@ console.log('g4', g4);
 ````js
 import { getScrollCoordinates } from 'js-ways';
 
-const g = getScrollPosition('scroll-elem-id');
+const g = getScrollCoordinates('scroll-elem-id');
 console.log('g', g);
 // Output: { x: 0, y: 0 }
 ````
@@ -325,7 +325,7 @@ console.log('g,', g);
 ````js
 import { getValueType } from 'js-ways';
 
-const g = getDataType([]);
+const g = getValueType([]);
 console.log('g', g);
 // Output: Array
 ````
