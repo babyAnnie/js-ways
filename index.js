@@ -38,11 +38,11 @@ export const monitorFullscreen = (fn = () => { }) => {
     document.addEventListener('MSFullscreenChange', fn, false);
   }
   return () => {
-    if (d.removeEventListener) {
-      d.removeEventListener('webkitfullscreenchange', fn, false);
-      d.removeEventListener('mozfullscreenchange', fn, false);
-      d.removeEventListener('fullscreenchange', fn, false);
-      d.removeEventListener('MSFullscreenChange', fn, false);
+    if (document.removeEventListener) {
+      document.removeEventListener('webkitfullscreenchange', fn, false);
+      document.removeEventListener('mozfullscreenchange', fn, false);
+      document.removeEventListener('fullscreenchange', fn, false);
+      document.removeEventListener('MSFullscreenChange', fn, false);
     }
   }
 }
@@ -203,9 +203,9 @@ export const getValueType = (v) => {
 
 // 取消冒泡的兼容代码
 export const stopBubble = (e) => {
-  if (e && e.stopPropagation) {
+  if (e && e.stopPropagationgetObj) {
     e.stopPropagation();
-  } else {
+  } else if (window && window.event) {
     window.event.cancelBubble = true;
   }
 }
@@ -213,11 +213,11 @@ export const stopBubble = (e) => {
 // 获取URL上的参数。返回对象或者值。
 export const getUrlParam = (obj = {}) => {
   if (!obj) return ''
-  const { url = '', key = '', getObj = false } = obj;
+  const { url = '', key = '', isObj = false } = obj;
   if (!url) return ''
   const u = new URL(url),
     searchParams = new URLSearchParams(u.search);
-  if (getObj) {
+  if (isObj) {
     const p = /(\w+)=/g;
     let result = {},
       keys = url.match(p);
@@ -244,8 +244,7 @@ function currying(fn, ...rest1) {
     return fn.apply(null, rest1.concat(rest2))
   }
 }
-export const curryIt = (obj = {}) => {
-  const { fn = () => { }, len = undefined } = obj;
+export const curryIt = (fn = () => { }, len = undefined) => {
   const length = len ?? fn.length  // 第一遍运行length是函数fn一共需要的参数个数，以后是剩余所需要的参数个数
   return function (...rest) {
     return rest.length >= length    // 检查是否传入了fn所需足够的参数
@@ -256,9 +255,11 @@ export const curryIt = (obj = {}) => {
 
 // 判断china身份证城市。返回字符串。
 export const getIDCity = (judgeID = '') => {
-  if (!judgeID || judgeID?.toString()?.length < 2) return '';
+  if (!judgeID) return '';
+  const n = Number(judgeID);
+  if (isNaN(n)) return ''
   const aCity = { 11: "北京", 12: "天津", 13: "河北", 14: "山西", 15: "内蒙古", 21: "辽宁", 22: "吉林", 23: "黑龙江", 31: "上海", 32: "江苏", 33: "浙江", 34: "安徽", 35: "福建", 36: "江西", 37: "山东", 41: "河南", 42: "湖北", 43: "湖南", 44: "广东", 45: "广西", 46: "海南", 50: "重庆", 51: "四川", 52: "贵州", 53: "云南", 54: "西藏", 61: "陕西", 62: "甘肃", 63: "青海", 64: "宁夏", 65: "新疆", 71: "台湾", 81: "香港", 82: "澳门", 91: "国外" };
-  return aCity?.[parseInt(judgeID.slice(0, 2))] ?? ''
+  return aCity?.[n] ?? ''
 }
 
 // 劫持粘贴板。无返回。

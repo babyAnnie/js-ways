@@ -35,8 +35,9 @@
 
 <br/>
 
+## code demo
 
-## **chunkArray(arr, size)** <span id="chunkArray"></span>
+### **chunkArray(arr, size)** <span id="chunkArray"></span>
  - arr: array
  - size: number
 <br/>
@@ -54,7 +55,7 @@ console.log('v', v);
 [:top:top](#top)
 
 
-## **copyToClipboard({ value, callback})** <span id="copyToClipboard"></span>
+### **copyToClipboard({ value, callback})** <span id="copyToClipboard"></span>
  - value: string
  - callback: function
 <br/>
@@ -75,7 +76,7 @@ copyToClipboard({
 [:top:top](#top)
 
 
-## **countChar(str)** <span id="countChar"></span>
+### **countChar(str)** <span id="countChar"></span>
  - str: string
 <br/>
 
@@ -90,7 +91,7 @@ console.log('c', c)
 [:top:top](#top)
 
 
-## **curryIt(fn)** <span id="curryIt"></span>
+### **curryIt(fn)** <span id="curryIt"></span>
  - fn: function
 <br/>
 
@@ -117,7 +118,7 @@ My name is Xiaohong, I am 28 years old, I like to eat avocado
 [:top:top](#top)
 
 
-## **debounce({fn, delay})** <span id="debounce"></span>
+### **debounce({fn, delay})** <span id="debounce"></span>
  - fn: function
  - delay: number
 <br/>
@@ -137,7 +138,7 @@ debounce({
 [:top:top](#top)
 
 
-## **downloadData({jsonArr, fileName, columnHeader, suffix})** <span id="downloadData"></span>
+### **downloadData({jsonArr, fileName, columnHeader, suffix})** <span id="downloadData"></span>
  - jsonArr: array
  - fileName: string
  -columnHeader: string
@@ -174,7 +175,7 @@ downloadDataToLocal({
 [:top:top](#top)
 
 
-## **exitFullscreen()**<span id="exitFullscreen"></span>
+### **exitFullscreen()**<span id="exitFullscreen"></span>
  - nothing
 <br/>
 
@@ -189,7 +190,7 @@ exitFullscreen()
 [:top:top](#top)
 
 
-## **flattenArray(arr)** <span id="flattenArray"></span>
+### **flattenArray(arr)** <span id="flattenArray"></span>
  - arr: array
 <br/>
 
@@ -204,7 +205,7 @@ console.log('a', a)
 [:top:top](#top)
 
 
-## **formatDate(date,joiner)** <span id="formatDate"></span>
+### **formatDate(date,joiner)** <span id="formatDate"></span>
  - date: Date
  - joiner: string
 <br/>
@@ -220,7 +221,7 @@ console.log('c', c);
 [:top:top](#top)
 
 
-## **fullscreen(id)** <span id="fullscreen"></span>
+### **fullscreen(id)** <span id="fullscreen"></span>
  - id: string
 <br/>
 
@@ -235,7 +236,7 @@ fullscreen("elem-id")
 [:top:top](#top)
 
 
-## **generateHexColor()** <span id="generateHexColor"></span>
+### **generateHexColor()** <span id="generateHexColor"></span>
  - nothing
 <br/>
 
@@ -250,7 +251,7 @@ console.log('r', r);
 [:top:top](#top)
 
 
-## **generateID(random)** <span id="generateID"></span>
+### **generateID(random)** <span id="generateID"></span>
  - random: boolean
 <br/>
 
@@ -265,7 +266,7 @@ console.log('g', g);
 [:top:top](#top)
 
 
-## **getIDCity(judgeID)** <span id="getIDCity"></span>
+### **getIDCity(judgeID)** <span id="getIDCity"></span>
  - judgeID: string/number
 <br/>
 
@@ -280,7 +281,7 @@ console.log('g4', g4);
 [:top:top](#top)
 
 
-## **getScrollCoordinates(el)** <span id="getScrollCoordinates"></span>
+### **getScrollCoordinates(el)** <span id="getScrollCoordinates"></span>
  - el: element
 <br/>
 
@@ -295,7 +296,7 @@ console.log('g', g);
 [:top:top](#top)
 
 
-## **getUrlParam({url, key})** <span id="getUrlParam"></span>
+### **getUrlParam({url, key})** <span id="getUrlParam"></span>
  - url: string
  - key: string
  - getObj: boolean
@@ -317,7 +318,7 @@ console.log('g,', g);
 [:top:top](#top)
 
 
-##**getValueType(v)** <span id="getValueType"></span>
+### **getValueType(v)** <span id="getValueType"></span>
  - v: any type
 <br/>
 
@@ -332,7 +333,7 @@ console.log('g', g);
 [:top:top](#top)
 
 
-## **isAvailableEmail(email)** <span id="isAvailableEmail"></span>
+### **isAvailableEmail(email)** <span id="isAvailableEmail"></span>
  - email: string
 <br/>
 
@@ -347,7 +348,7 @@ console.log('b', b);
 [:top:top](#top)
 
 
-## **isInViewport(id)** <span id="isInViewport"></span>
+### **isInViewport(id)** <span id="isInViewport"></span>
  - id: string (element id)
 <br/>
 
@@ -362,7 +363,7 @@ console.log('b', b);
 [:top:top](#top)
 
 
-## **isURL(url)** <span id="isURL"></span>
+### **isURL(url)** <span id="isURL"></span>
  - url: string
 <br/>
 
@@ -377,7 +378,7 @@ console.log('b', b);
 [:top:top](#top)
 
 
-## **monitorFullscreen(fn)** <span id="monitorFullscreen"></span>
+### **monitorFullscreen(fn)** <span id="monitorFullscreen"></span>
  - fn: function
 <br/>
 
@@ -391,7 +392,7 @@ monitorFullscreen(() => console.log('Events executed when the fullscreen state c
 [:top:top](#top)
 
 
-## **oneBecomesTwo(num)** <span id="oneBecomesTwo"></span>
+### **oneBecomesTwo(num)** <span id="oneBecomesTwo"></span>
  - num: number | string(number)
 <br/>
 
@@ -406,7 +407,7 @@ console.log('o', o);
 [:top:top](#top)
 
 
-## **stopBubble(e)** <span id="stopBubble"></span>
+### **stopBubble(e)** <span id="stopBubble"></span>
  - e: event
 <br/>
 
@@ -421,7 +422,7 @@ stopBubble(event);
 [:top:top](#top)
 
 
-## **throttle({fn, delay})** <span id="throttle"></span>
+### **throttle({fn, delay})** <span id="throttle"></span>
  - fn: function
  - delay: number (ms, milliseconds)
 <br/>
@@ -440,7 +441,7 @@ throttle({
 [:top:top](#top)
 
 
-## **unifiedStorage(name)** <span id="unifiedStorage"></span>
+### **unifiedStorage(name)** <span id="unifiedStorage"></span>
  - name: string
 <br/>
 
@@ -462,3 +463,9 @@ store.clear('someone');
 // Others: {teacher: "Aleng", student: "Mingming"} is stored in localStorage
 ````
 [:top:top](#top)
+
+## Test Results
+
+Tested all methods with Jest, all passed.
+
+![test](https://github.com/babyAnnie/js-ways/blob/master/test.png)
