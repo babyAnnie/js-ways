@@ -468,4 +468,4 @@ store.clear('someone');
 
 Tested all methods with Jest, all passed.
 
-![test](https://github.com/babyAnnie/js-ways/blob/master/test.png)
+![test](https://github.com/babyAnnie/js-ways/blob/master/src/test/test.png)
