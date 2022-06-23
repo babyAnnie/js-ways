@@ -468,4 +468,4 @@ store.clear('someone');
 
 使用Jest测试所有方法，全部通过。
 
-![test](https://github.com/babyAnnie/js-ways/blob/master/test.png)
+![test](https://github.com/babyAnnie/js-ways/blob/master/src/test/test.png)
